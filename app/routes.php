@@ -22,7 +22,7 @@ Route::get('/', function()
 	$admin->name = 'Admin';
 	$admin->save();
 	*/
-	$user = User::where('username','=','kadirarli')->first();
+	//$user = User::where('username','=','kadirarli')->first();
 	/*
 	$user->attachRole( $admin ); // Parameter can be an Role object, array or id.
 

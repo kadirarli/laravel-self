@@ -2,12 +2,11 @@
 
 return array(
 	'action_permissions'=> array(
-	    
 	    'delete' => function($model)
 	    {
 	        return Auth::user()->can('delete_users');
 	    },
-	    'insert' => function($model)
+	    'create' => function($model)
 	    {
 	        return Auth::user()->can('create_users');
 	    },
