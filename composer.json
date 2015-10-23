@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"zizaco/confide": "~4.3@dev",
-		"zizaco/entrust": "1.2.*@dev"
+		"zizaco/entrust": "1.2.*@dev",
+		"frozennode/administrator": "4.*"
 	},
 	"autoload": {
 		"classmap": [

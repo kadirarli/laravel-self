@@ -39,10 +39,10 @@ Route::get('/', function()
 	$owner->perms()->sync(array($managePosts->id,$manageUsers->id));
 	$admin->perms()->sync(array($managePosts->id));
 	*/
-	$bool = $user->hasRole("Owner");    // false
-	$bool = $user->hasRole("Admin");    // true
-	$bool = $user->can("manage_posts"); // true
-	$bool = $user->can("manage_users"); // false
+	//$bool = $user->hasRole("Owner");    // false
+	//$bool = $user->hasRole("Admin");    // true
+	//$bool = $user->can("manage_posts"); // true
+	//$bool = $user->can("manage_users"); // false
 
 	return View::make('hello');
 });
@@ -59,7 +59,3 @@ Route::post('users/forgot_password', 		'UsersController@doForgotPassword');
 Route::get ('users/reset_password/{token}', 'UsersController@resetPassword');
 Route::post('users/reset_password', 		'UsersController@doResetPassword');
 Route::get ('users/logout', 				'UsersController@logout');
-
-Route::get("admin/qwe", function(){
-	return "adminsin anladık:)";
-});

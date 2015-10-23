@@ -49,7 +49,7 @@ Route::filter('auth', function()
 });
 
 // Only admin permission can enter admin panel
-Entrust::routeNeedsPermission( 'admin/*', 'manage_posts' );
+//Entrust::routeNeedsPermission( 'admin/*', 'list_users' );
 
 Route::filter('auth.basic', function()
 {
