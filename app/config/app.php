@@ -126,6 +126,7 @@ return array(
 		'Frozennode\Administrator\AdministratorServiceProvider',
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
 		'Thujohn\Rss\RssServiceProvider',
+		'Mews\Purifier\PurifierServiceProvider',
 	),
 
 	/*
@@ -198,6 +199,7 @@ return array(
 		'SEOSitemap'	  => 'Vinicius73\SEO\Facades\Sitemap',
 		'OpenGraph' 	  => 'Vinicius73\SEO\Facades\OpenGraphHelper',
 		'Rss'			  => 'Thujohn\Rss\RssFacade',
+		'Purifier'		  => 'Mews\Purifier\Facades\Purifier',
 	),
 
 );

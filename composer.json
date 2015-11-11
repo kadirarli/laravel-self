@@ -9,7 +9,8 @@
 		"zizaco/entrust": "1.2.*@dev",
 		"frozennode/administrator": "4.*",
 		"vinicius73/seotools": "dev-master",
-		"thujohn/rss": "~1.0"
+		"thujohn/rss": "~1.0",
+		"mews/purifier": "dev-master-l4"
 	},
 	"autoload": {
 		"classmap": [
