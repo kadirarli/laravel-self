@@ -124,7 +124,7 @@ return array(
 		'Zizaco\Confide\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Frozennode\Administrator\AdministratorServiceProvider',
-
+		'Vinicius73\SEO\Providers\SEOServiceProvider',
 	),
 
 	/*
@@ -193,7 +193,9 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Confide'         => 'Zizaco\Confide\Facade',
 		'Entrust'    	  => 'Zizaco\Entrust\EntrustFacade',
-
+		'SEOMeta'  		  => 'Vinicius73\SEO\Facades\Meta',
+		'SEOSitemap'	  => 'Vinicius73\SEO\Facades\Sitemap',
+		'OpenGraph' 	  => 'Vinicius73\SEO\Facades\OpenGraphHelper',
 	),
 
 );

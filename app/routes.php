@@ -43,10 +43,26 @@ Route::get('/', function()
 	//$bool = $user->hasRole("Admin");    // true
 	//$bool = $user->can("manage_posts"); // true
 	//$bool = $user->can("manage_users"); // false
-
+    SEOMeta::setTitle('setTitle');
+    SEOMeta::setDescription('setDescription'); // is automatically limited to 160 characters
+    OpenGraph::addImage('addImage.png');
 	return View::make('hello');
 });
-//
+
+// Sitemap
+Route::get ('sitemap', function(){
+	$posts = DB::table('iumslas')->orderBy('created_at', 'desc')->get();
+    foreach($posts as $post){
+        $element = array(
+                  'location'         => "/sitemap-posts.xml",
+                  'last_modified'    => $post->created_at,
+                  'change_frequency' => 'weekly',
+                  'priority'         => '0.90'
+            );
+        SEOSitemap::addRaw($element);
+    }
+    return Response::make(SEOSitemap::generate(), 200, array('Content-Type' => 'text/xml'));
+});
 
 // Confide routes
 Route::get ('users/create', 				'UsersController@create');
