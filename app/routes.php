@@ -64,6 +64,18 @@ Route::get ('sitemap', function(){
     return Response::make(SEOSitemap::generate(), 200, array('Content-Type' => 'text/xml'));
 });
 
+//RSS
+Route::get('/rss', function()
+{
+    $feed = Rss::feed('2.0', 'UTF-8');
+    $feed->channel(array('title' => 'Channel\'s title', 'description' => 'Channel\'s description', 'link' => 'http://www.test.com/'));
+    for ($i=1; $i<=5; $i++){
+        $feed->item(array('title' => 'Item '.$i, 'description|cdata' => 'Description '.$i, 'link' => 'http://www.test.com/article-'.$i));
+    }
+
+    return Response::make($feed, 200, array('Content-Type' => 'text/xml'));
+});
+
 // Confide routes
 Route::get ('users/create', 				'UsersController@create');
 Route::post('users', 						'UsersController@store');

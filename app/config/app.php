@@ -125,6 +125,7 @@ return array(
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Frozennode\Administrator\AdministratorServiceProvider',
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
+		'Thujohn\Rss\RssServiceProvider',
 	),
 
 	/*
@@ -196,6 +197,7 @@ return array(
 		'SEOMeta'  		  => 'Vinicius73\SEO\Facades\Meta',
 		'SEOSitemap'	  => 'Vinicius73\SEO\Facades\Sitemap',
 		'OpenGraph' 	  => 'Vinicius73\SEO\Facades\OpenGraphHelper',
+		'Rss'			  => 'Thujohn\Rss\RssFacade',
 	),
 
 );
