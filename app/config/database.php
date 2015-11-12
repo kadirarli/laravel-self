@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'theiums',
+			'database'  => 'laravel-self',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

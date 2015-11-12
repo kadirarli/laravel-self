@@ -65,8 +65,7 @@ Route::get ('sitemap', function(){
 });
 
 //RSS
-Route::get('/rss', function()
-{
+Route::get('/rss', function(){
     $feed = Rss::feed('2.0', 'UTF-8');
     $feed->channel(array('title' => 'Channel\'s title', 'description' => 'Channel\'s description', 'link' => 'http://www.test.com/'));
     for ($i=1; $i<=5; $i++){
@@ -74,6 +73,19 @@ Route::get('/rss', function()
     }
 
     return Response::make($feed, 200, array('Content-Type' => 'text/xml'));
+});
+
+//Slug
+Route::get('/slug', function(){
+	 $post = new Post([
+     'title' => 'My Awesome Blog Post',
+	]);
+
+	$post = new Post([
+     'title' => 'öçşiğü-ajhsgd*.asdkjy21ı3uydjsa',
+	]);
+
+	$post->save();
 });
 
 // Confide routes

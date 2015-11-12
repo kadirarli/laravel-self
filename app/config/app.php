@@ -127,6 +127,7 @@ return array(
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
 		'Thujohn\Rss\RssServiceProvider',
 		'Mews\Purifier\PurifierServiceProvider',
+		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 	),
 
 	/*

@@ -10,7 +10,8 @@
 		"frozennode/administrator": "4.*",
 		"vinicius73/seotools": "dev-master",
 		"thujohn/rss": "~1.0",
-		"mews/purifier": "dev-master-l4"
+		"mews/purifier": "dev-master-l4",
+		"cviebrock/eloquent-sluggable": "2.*"
 	},
 	"autoload": {
 		"classmap": [
