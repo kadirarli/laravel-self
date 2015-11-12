@@ -1,12 +1,11 @@
 <?php
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
-// use Cviebrock\EloquentTaggable\Taggable;
-// use Cviebrock\EloquentTaggable\TaggableImpl;
-class Post extends \Eloquent implements SluggableInterface//, Taggable
-{
+use Cviebrock\EloquentTaggable\Taggable;
+use Cviebrock\EloquentTaggable\TaggableImpl;
+class Post extends \Eloquent implements SluggableInterface, Taggable{
     use SluggableTrait;
-    // use TaggableImpl;
+    use TaggableImpl;
     protected $sluggable = array(
         'build_from' => 'title',
         'save_to'    => 'slug',

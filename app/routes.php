@@ -88,6 +88,15 @@ Route::get('/slug', function(){
 	$post->save();
 });
 
+//Tag
+Route::get("/tag",function(){
+	$data = Input::only('title', 'body', 'category_id');
+    $data['user_id'] = 1;
+    $data['body'] = $data['body'];
+	$post = Post::create($data);
+    $post->tag("Apple,Banana,Cherry");
+});
+
 // Confide routes
 Route::get ('users/create', 				'UsersController@create');
 Route::post('users', 						'UsersController@store');

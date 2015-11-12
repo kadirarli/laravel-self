@@ -11,7 +11,8 @@
 		"vinicius73/seotools": "dev-master",
 		"thujohn/rss": "~1.0",
 		"mews/purifier": "dev-master-l4",
-		"cviebrock/eloquent-sluggable": "2.*"
+		"cviebrock/eloquent-sluggable": "2.*",
+		"cviebrock/eloquent-taggable": "0.*"
 	},
 	"autoload": {
 		"classmap": [

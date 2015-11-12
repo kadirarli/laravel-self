@@ -128,6 +128,7 @@ return array(
 		'Thujohn\Rss\RssServiceProvider',
 		'Mews\Purifier\PurifierServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+		'Cviebrock\EloquentTaggable\TaggableServiceProvider',
 	),
 
 	/*
