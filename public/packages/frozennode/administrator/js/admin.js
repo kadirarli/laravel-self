@@ -171,11 +171,6 @@
 			 */
 			originalEditFields: [],
 
-			/* The original data when fetched from the server initially
-			 * object
-			 */
-			originalData: {},
-
 			/* The model edit fields
 			 * array
 			 */
@@ -396,7 +391,6 @@
 
 				//update all the info to the new item state
 				ko.mapping.updateData(self, self.model, self.model);
-				self.originalData = {};
 
 				//scroll to the top of the page
 				$('html, body').animate({scrollTop: 0}, 'fast')
@@ -478,9 +472,6 @@
 				//update the actions and the action permissions
 				self.actions(data.administrator_actions);
 				self.actionPermissions = data.administrator_action_permissions;
-
-				//set the original values
-				self.originalData = data;
 
 				//set the new options for relationships
 				$.each(adminData.edit_fields, function(ind, el)
@@ -848,18 +839,6 @@
 				});
 
 				return filters;
-			},
-
-			/**
-			 * Determines if the provided field is dirty
-			 *
-			 * @param string
-			 *
-			 * @return bool
-			 */
-			fieldIsDirty: function(field)
-			{
-				return this.originalData[field] != this[field]();
 			},
 
 			/**
@@ -1403,9 +1382,6 @@
 			//resizing the window
 			$(window).resize(self.resizePage);
 
-			//mousedowning or keypressing anywhere should resize the page as well
-			$('body').on('mouseup keypress', self.resizePage);
-
 			//set up the history event callback
 			History.Adapter.bind(window,'statechange',function() {
 				var state = History.getState();
@@ -1513,24 +1489,21 @@
 		 */
 		resizePage: function()
 		{
-			setTimeout(function()
-			{
-				var winHeight = $(window).height(),
-					itemEditHeight = $('div.item_edit').outerHeight() + 50,
-					usedHeight = winHeight > itemEditHeight ? winHeight - 45 : itemEditHeight,
-					size = window.getComputedStyle(document.body, ':after').getPropertyValue('content');
+			var winHeight = $(window).height(),
+				itemEditHeight = $('form.edit_form').height() + 50,
+				usedHeight = winHeight > itemEditHeight ? winHeight - 45 : itemEditHeight,
+				size = window.getComputedStyle(document.body, ':after').getPropertyValue('content');
 
-				//resize the page height
-				$('#admin_page').css({minHeight: usedHeight});
+			//resize the page height
+			$('#admin_page').css({minHeight: usedHeight});
 
-				//resize or scroll the data table
-				if (window.admin) {
-					if (! window.admin.dataTableScrollable)
-						window.admin.resizeDataTable();
-					else
-					window.admin.scrollDataTable();
-				}
-			}, 50);
+			//resize or scroll the data table
+			if (window.admin) {
+				if (! window.admin.dataTableScrollable)
+					window.admin.resizeDataTable();
+				else
+				window.admin.scrollDataTable();
+			}
 		},
 
 		/**

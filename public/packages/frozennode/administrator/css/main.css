@@ -81,7 +81,7 @@
 .input {
   display: inline-block;
   vertical-align: middle;
-  height: 18px;
+  /*height: 18px;*/
   font-family: 'Oxygen', sans-serif;
   -moz-box-shadow: inset 0px 1px 2px 1px #eee;
   -webkit-box-shadow: inset 0px 1px 2px 1px #eee;
@@ -192,14 +192,6 @@
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
-}
-.editForm > div p.description {
-  width: 90%;
-  margin: 0 0 7px 2px;
-}
-.editForm > div p.description_below {
-  width: 90%;
-  margin: 2px 0 0 2px;
 }
 .editForm > div select,
 .editForm > div textarea,
@@ -362,14 +354,6 @@
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
-}
-#settings_page form.settings_form > div p.description {
-  width: 90%;
-  margin: 0 0 7px 2px;
-}
-#settings_page form.settings_form > div p.description_below {
-  width: 90%;
-  margin: 2px 0 0 2px;
 }
 #settings_page form.settings_form > div select,
 #settings_page form.settings_form > div textarea,
@@ -592,34 +576,34 @@ li {
 a {
   text-decoration: none;
 }
-#wrapper {
+body {
   font-family: 'Oxygen', sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #333333;
 }
-#wrapper h2 {
+body h2 {
   font-size: 24px;
   line-height: 36px;
 }
-#wrapper textarea,
-#wrapper input[type="text"],
-#wrapper input[type="password"],
-#wrapper input[type="datetime"],
-#wrapper input[type="datetime-local"],
-#wrapper input[type="date"],
-#wrapper input[type="month"],
-#wrapper input[type="time"],
-#wrapper input[type="week"],
-#wrapper input[type="number"],
-#wrapper input[type="email"],
-#wrapper input[type="url"],
-#wrapper input[type="search"],
-#wrapper input[type="tel"],
-#wrapper input[type="color"] {
+body textarea,
+body input[type="text"],
+body input[type="password"],
+body input[type="datetime"],
+body input[type="datetime-local"],
+body input[type="date"],
+body input[type="month"],
+body input[type="time"],
+body input[type="week"],
+body input[type="number"],
+body input[type="email"],
+body input[type="url"],
+body input[type="search"],
+body input[type="tel"],
+body input[type="color"] {
   display: inline-block;
   vertical-align: middle;
-  height: 18px;
+  /*height: 18px;*/
   font-family: 'Oxygen', sans-serif;
   -moz-box-shadow: inset 0px 1px 2px 1px #eee;
   -webkit-box-shadow: inset 0px 1px 2px 1px #eee;
@@ -639,28 +623,28 @@ a {
   transition: all 0.2s ease 0s;
   width: 210px;
 }
-#wrapper textarea:focus,
-#wrapper input[type="text"]:focus,
-#wrapper input[type="password"]:focus,
-#wrapper input[type="datetime"]:focus,
-#wrapper input[type="datetime-local"]:focus,
-#wrapper input[type="date"]:focus,
-#wrapper input[type="month"]:focus,
-#wrapper input[type="time"]:focus,
-#wrapper input[type="week"]:focus,
-#wrapper input[type="number"]:focus,
-#wrapper input[type="email"]:focus,
-#wrapper input[type="url"]:focus,
-#wrapper input[type="search"]:focus,
-#wrapper input[type="tel"]:focus,
-#wrapper input[type="color"]:focus {
+body textarea:focus,
+body input[type="text"]:focus,
+body input[type="password"]:focus,
+body input[type="datetime"]:focus,
+body input[type="datetime-local"]:focus,
+body input[type="date"]:focus,
+body input[type="month"]:focus,
+body input[type="time"]:focus,
+body input[type="week"]:focus,
+body input[type="number"]:focus,
+body input[type="email"]:focus,
+body input[type="url"]:focus,
+body input[type="search"]:focus,
+body input[type="tel"]:focus,
+body input[type="color"]:focus {
   border-color: rgba(82,168,236,0.8);
   -moz-box-shadow: inset 0 1px 2px 1px #eee, 0 0 8px rgba(82,168,236,0.6);
   -webkit-box-shadow: inset 0 1px 2px 1px #eee, 0 0 8px rgba(82,168,236,0.6);
   box-shadow: inset 0 1px 2px 1px #eee, 0 0 8px rgba(82,168,236,0.6);
   outline: 0;
 }
-#wrapper label {
+body label {
   display: block;
   margin-bottom: 5px;
 }
@@ -984,19 +968,26 @@ a {
   position: relative;
 }
 #admin_page label {
-  margin-bottom: 3px;
-  font-weight: bold;
+      margin-bottom: 3px;
+    font-weight: bold;
+    text-align: left;
+}
+#admin_page label.filtrebar,#admin_page div#sidebar h2.filtrebar{
+  padding-left: 18px;
 }
 #admin_page div#sidebar {
   float: right;
-  margin-right: 13px;
-  margin-top: 60px;
-  width: 245px;
+  margin-right: 25px;
+  margin-top: 36px;
+  width: 258px;
 }
 #admin_page div#sidebar h2 {
   color: #444;
   text-shadow: #DDD 0 1px 0;
   margin-bottom: 15px;
+}
+.filters{
+  text-align: center;
 }
 #admin_page div#sidebar div.filters > div {
   margin-bottom: 10px;
@@ -1005,6 +996,9 @@ a {
 #admin_page div#sidebar div.filters > div select,
 #admin_page div#sidebar div.filters > div input[type=hidden] {
   width: 225px;
+}
+#filters_sidebar_section{
+  padding-top: 21px;
 }
 #admin_page div#sidebar div.filters > div div.loader {
   position: absolute;
@@ -1016,14 +1010,6 @@ a {
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
-}
-#admin_page div#sidebar div.filters > div p.description {
-  width: 90%;
-  margin: 0 0 7px 2px;
-}
-#admin_page div#sidebar div.filters > div p.description_below {
-  width: 90%;
-  margin: 2px 0 0 2px;
 }
 #admin_page div#sidebar div.filters > div.min_max input[type=text] {
   width: 87px;
@@ -1198,8 +1184,8 @@ a {
   width: 70px;
 }
 #admin_page #content div.table_container div.table_scrollable {
-  width: 100%;
-  overflow-x: auto;
+  width:100%;
+  overflow-x:auto;
 }
 #admin_page #content div.table_container table.results {
   width: 100%;
@@ -1293,7 +1279,7 @@ a {
   bottom: 0;
   background-color: #000;
   opacity: 0.50;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha" false;
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
   filter: alpha(opacity=50);
   text-align: center;
@@ -1367,14 +1353,6 @@ a {
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
-}
-#admin_page #content div.item_edit_container div.item_edit form.edit_form > div p.description {
-  width: 90%;
-  margin: 0 0 7px 2px;
-}
-#admin_page #content div.item_edit_container div.item_edit form.edit_form > div p.description_below {
-  width: 90%;
-  margin: 2px 0 0 2px;
 }
 #admin_page #content div.item_edit_container div.item_edit form.edit_form > div select,
 #admin_page #content div.item_edit_container div.item_edit form.edit_form > div textarea,

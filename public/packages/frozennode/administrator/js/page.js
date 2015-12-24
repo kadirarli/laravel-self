@@ -128,8 +128,7 @@
 		document.onfocusin = document.onfocusout = onchange;
 	// All others:
 	else
-		window.onpageshow = window.onpagehide
-			= window.onfocus = window.onblur = onchange;
+		window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
 
 	function onchange (evt) {
 		var v = 'sg-tab-bust-visible', h = 'sg-tab-bust-hidden',
@@ -140,10 +139,10 @@
 		evt = evt || window.event;
 		if (evt.type in evtMap)
 			document.body.className = evtMap[evt.type];
-		else
-			document.body.className = this[hidden] ? "sg-tab-bust-hidden" : "sg-tab-bust-visible";
+		//else
+		//	document.body.className = this[hidden] ? "sg-tab-bust-hidden" : "sg-tab-bust-visible";
 
 		//clear out the body's class
-		document.body.className = '';
+		//document.body.className = '';
 	}
 })();

@@ -1,5 +1,7 @@
 <?php
 
+$site_settings = json_decode(file_get_contents(storage_path() . '/administrator_settings/site.json')); 
+
 return array(
 	'defaults' => array(
 		/**

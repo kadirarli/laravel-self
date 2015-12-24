@@ -547,11 +547,7 @@
 				editor = editors[options.id];
 			else
 			{
-				$element.ckeditor({ 
-					language : language,
-					readOnly : !adminData.edit_fields[context.field_name].editable
-				});
-				
+				$element.ckeditor({ language : language });
 				editor = $element.ckeditorGet();
 				editors[options.id] = editor;
 			}
@@ -568,6 +564,7 @@
 				{
 					window.admin.resizePage();
 				});
+				editor.resize( '350', '350' );
 			});
 
 			//wire up the blur event to ensure our observable is properly updated
@@ -646,26 +643,6 @@
 		}
 	 };
 
-	/**
-	 * The enumText binding converts a value and an options array to a "Label (value)" readable format
-	 */
-	ko.bindingHandlers.enumText = {
-		update: function (element, valueAccessor, allBindingsAccessor, viewModel)
-		{
-			var options = valueAccessor(),
-				value = options.value,
-				enumOptions = options.enumOptions;
-
-			for (var i = 0; i < enumOptions.length; i++) {
-				if(enumOptions[i].id == value) {
-					$(element).html( enumOptions[i].text + " (" + value + ")" );
-					return;
-				}
-			}
-
-			$(element).html(value);
-		}
-	};
 
 	/**
 	 * File uploader using plupload

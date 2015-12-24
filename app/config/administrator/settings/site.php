@@ -16,19 +16,30 @@ return array(
 	 */
 	'edit_fields' => array(
 		'site_name' => array(
-			'title' => 'Site Name',
+			'title' => 'General Site Title',
 			'type' => 'text',
 			'limit' => 50,
 		),
+		'site_description' => array(
+			'title' => 'Site Description',
+			'type' => 'textarea',
+			'limit' => 150,
+		),
+		'site_keywords' => array(
+			'title' => 'Site Keywords',
+			'type' => 'textarea',
+			'limit' => 200,
+		),
+		
 		'page_cache_lifetime' => array(
 			'title' => 'Page Cache Lifetime (in minutes)',
 			'type' => 'number',
 		),
-		'logo' => array(
-			'title' => 'Image (200 x 150)',
+		'favicon' => array(
+			'title' => 'Favicon Image (200 x 150)',
 			'type' => 'image',
 			'naming' => 'random',
-			'location' => public_path()."/",
+			'location' => public_path()."/assets/images/",
 			'size_limit' => 2,
 			'sizes' => array(
 		 		array(200, 150, 'crop', public_path() . '/resize/', 100),
@@ -42,8 +53,10 @@ return array(
 	 */
 	'rules' => array(
 		'site_name' => 'required|max:50',
+		'site_description' => 'required|max:150',
+		'site_keywords' => 'required',
 		'page_cache_lifetime' => 'required|integer',
-		'logo' => 'required',
+		'favicon' => 'required',
 	),
 	/**
 	 * This is run prior to saving the JSON form data
@@ -55,7 +68,7 @@ return array(
 	 */
 	'before_save' => function(&$data)
 	{
-		$data['site_name'] = $data['site_name'] . ' - The Blurst Site Ever';
+		
 	},
 	/**
 	 * The permission option is an authentication check that lets you define a closure that should return true if the current user
