@@ -30,7 +30,14 @@ return array(
 			'type' => 'textarea',
 			'limit' => 200,
 		),
-		
+		'fb_app_id' => array(
+			'title' => 'Facebook App Id',
+			'type' => 'text'
+		),
+		'fb_admins' => array(
+			'title' => 'Facebook Admins',
+			'type' => 'textarea'
+		),
 		'page_cache_lifetime' => array(
 			'title' => 'Page Cache Lifetime (in minutes)',
 			'type' => 'number',

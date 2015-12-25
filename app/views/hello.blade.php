@@ -4,17 +4,14 @@
 	<meta charset="UTF-8">
 	{{SEOMeta::generate()}}
     {{OpenGraph::generate()}}
+	{{Twitter::generate()}}
 	<style>
 		@import url(//fonts.googleapis.com/css?family=Lato:700);
-
-		body {
+		.welcome {
 			margin:0;
 			font-family:'Lato', sans-serif;
 			text-align:center;
 			color: #999;
-		}
-
-		.welcome {
 			width: 300px;
 			height: 200px;
 			position: absolute;

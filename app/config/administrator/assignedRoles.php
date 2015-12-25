@@ -1,29 +1,29 @@
 <?php
 
 return array(
-	'action_permissions'=> array(
-	    'delete' => function($model)
-	    {
-	        return Auth::user()->can('delete_users');
-	    },
-	    'create' => function($model)
-	    {
-	        return Auth::user()->can('create_users');
-	    },
-	    'update' => function($model)
-	    {
-	        return Auth::user()->can('edit_users');
-	    }
-	),
-	'permission'=> function()
-	{
-		if(User::where('username','=',Auth::user()->username)->first()->can("read")){
-			return true;	
-		}
-		else{
-			return false;
-		}
-	},
+	// 'action_permissions'=> array(
+	//     'delete' => function($model)
+	//     {
+	//         return Auth::user()->can('delete_users');
+	//     },
+	//     'create' => function($model)
+	//     {
+	//         return Auth::user()->can('create_users');
+	//     },
+	//     'update' => function($model)
+	//     {
+	//         return Auth::user()->can('edit_users');
+	//     }
+	// ),
+	// 'permission'=> function()
+	// {
+	// 	// if(User::where('username','=',Auth::user()->username)->first()->can("read")){
+	// 		return true;	
+	// 	// }
+	// 	// else{
+	// 	// 	return false;
+	// 	// }
+	// },
 	/**
 	 * Model title
 	 *

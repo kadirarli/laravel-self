@@ -2,18 +2,18 @@
 
 return array(
 	'action_permissions'=> array(
-	    'delete' => function($model)
-	    {
-	        return Auth::user()->can('delete_users');
-	    },
-	    'create' => function($model)
-	    {
-	        return Auth::user()->can('create_users');
-	    },
-	    'update' => function($model)
-	    {
-	        return Auth::user()->can('edit_users');
-	    }
+	    // 'delete' => function($model)
+	    // {
+	    //     return Auth::user()->can('delete_users');
+	    // },
+	    // 'create' => function($model)
+	    // {
+	    //     return Auth::user()->can('create_users');
+	    // },
+	    // 'update' => function($model)
+	    // {
+	    //     return Auth::user()->can('edit_users');
+	    // }
 	),
 	/**
 	 * Model title

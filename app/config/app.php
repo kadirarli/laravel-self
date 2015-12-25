@@ -127,8 +127,6 @@ return array(
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
 		'Thujohn\Rss\RssServiceProvider',
 		'Mews\Purifier\PurifierServiceProvider',
-		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
-		'Cviebrock\EloquentTaggable\TaggableServiceProvider',
 	),
 
 	/*
@@ -200,6 +198,7 @@ return array(
 		'SEOMeta'  		  => 'Vinicius73\SEO\Facades\Meta',
 		'SEOSitemap'	  => 'Vinicius73\SEO\Facades\Sitemap',
 		'OpenGraph' 	  => 'Vinicius73\SEO\Facades\OpenGraphHelper',
+		'Twitter'    	  => 'Vinicius73\SEO\Facades\TwitterHelper',
 		'Rss'			  => 'Thujohn\Rss\RssFacade',
 		'Purifier'		  => 'Mews\Purifier\Facades\Purifier',
 	),

@@ -53,11 +53,12 @@ return array(
 	 */
 	'menu' => array(
 			"User Configrations" => array(	
-											"roles",
 											"permissions",
-											"permissionRoles",
+											"roles",
+											//"permissionRoles",
 											"users",
-											"assignedRoles"),
+											//"assignedRoles"
+											),
 			'Settings' => array('settings.site')),
 
 	/**
@@ -137,5 +138,5 @@ return array(
 	 */
 	'locales' => array("tr","en"),
 
-	'user' => User::adminCard(1),
+	'user' => User::adminCard(null !== Auth::user()?Auth::user()->id:1),
 );
