@@ -15,6 +15,7 @@ class UsersController extends \BaseController
      */
     public function create()
     {
+        SEOMeta::setTitle(Lang::get("tags.sign_up"));
         return View::make(Config::get('confide::signup_form'));
     }
 
@@ -60,6 +61,7 @@ class UsersController extends \BaseController
      */
     public function login()
     {
+        SEOMeta::setTitle(Lang::get("tags.login"));
         if (Confide::user()) {
             return Redirect::to('/');
         } else {
@@ -103,6 +105,7 @@ class UsersController extends \BaseController
      */
     public function confirm($code)
     {
+        SEOMeta::setTitle(Lang::get("tags.login"));
         if (Confide::confirm($code)) {
             $notice_msg = Lang::get('confide::confide.alerts.confirmation');
             return Redirect::action('UsersController@login')
@@ -121,6 +124,7 @@ class UsersController extends \BaseController
      */
     public function forgotPassword()
     {
+        SEOMeta::setTitle(Lang::get("tags.forgot_password"));
         return View::make(Config::get('confide::forgot_password_form'));
     }
 
@@ -152,6 +156,7 @@ class UsersController extends \BaseController
      */
     public function resetPassword($token)
     {
+        SEOMeta::setTitle(Lang::get("tags.reset_password"));
         return View::make(Config::get('confide::reset_password_form'))
                 ->with('token', $token);
     }

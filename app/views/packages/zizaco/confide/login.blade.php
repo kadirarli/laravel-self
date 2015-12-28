@@ -1,7 +1,7 @@
 @extends('packages.zizaco.confide.layouts.default')
 
 @section('from')
-    <form class="form-signin" role="form" method="POST" action="{{{ URL::to('/users/login') }}}" accept-charset="UTF-8">
+{{--     <form class="form-signin" role="form" method="POST" action="{{{ URL::to('/users/login') }}}" accept-charset="UTF-8">
         <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
         <h2 class="form-signin-heading">{{{ Lang::get('confide::confide.e_mail') }}}</h2>
         <label for="email" class="sr-only">{{{ Lang::get('confide::confide.e_mail') }}}</label>
@@ -24,8 +24,9 @@
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">{{{ Lang::get('confide::confide.login.submit') }}}</button>
-
-        <!--fieldset>
+</form> --}}
+<form class="form-signin" role="form" method="POST" action="{{{ URL::to('/users/login') }}}" accept-charset="UTF-8">
+        <fieldset>
             <div class="form-group">
                 <label for="email">{{{ Lang::get('confide::confide.e_mail') }}}</label>
                 <input class="form-control" tabindex="1" placeholder="{{{ Lang::get('confide::confide.e_mail') }}}" type="text" name="email" id="email" value="{{{ Input::old('email') }}}">
@@ -52,8 +53,8 @@
                 <div class="alert">{{{ Session::get('notice') }}}</div>
             @endif
             <div class="form-group">
-                <button tabindex="3" type="submit" class="btn btn-default">{{{ Lang::get('confide::confide.login.submit') }}}</button>
+                <button tabindex="3" type="submit" class="btn btn-primary">{{{ Lang::get('confide::confide.login.submit') }}}</button>
             </div>
-        </fieldset-->
+        </fieldset>
     </form>
 @stop

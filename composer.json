@@ -5,10 +5,10 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"zizaco/confide": "~4.3@dev",
+		"zizaco/confide": "4.*",
 		"zizaco/entrust": "1.2.*@dev",
 		"frozennode/administrator": "4.*",
-		"vinicius73/seotools": "dev-master",
+		"vinicius73/seotools": "1.*",
 		"thujohn/rss": "~1.0",
 		"mews/purifier": "dev-master-l4",
 		"fzaninotto/faker": "v1.3.0"
@@ -44,6 +44,14 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/kadirarli/Laravel-Administrator.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/kadirarli/SeoTools.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/kadirarli/confide.git"
 		}
 	 ]
 }

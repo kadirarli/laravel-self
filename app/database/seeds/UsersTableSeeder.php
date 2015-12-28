@@ -24,21 +24,6 @@ class UsersTableSeeder extends Seeder
         $user->save();
 
         $user = new User;
-        $user->username     = 'useradmin';
-        $user->email        = 'useradmin@useradmin.com';
-        $user->password     = 'useradmin';
-        $user->password_confirmation = 'useradmin';
-        $user->confirmed    = 1;
-        $user->profile_photo = $faker->imageUrl($width = 198, $height = 198);
-        $fullname = explode(" ", $faker->name);
-        $surname = last($fullname);        
-        unset($fullname[count($fullname)-1]);
-        $name = implode(" ", $fullname);
-        $user->name = $name;
-        $user->surname = $surname;
-        $user->save();
-
-        $user = new User;
         $user->username     = 'admin';
         $user->email        = 'admin@admin.com';
         $user->password     = 'admin';

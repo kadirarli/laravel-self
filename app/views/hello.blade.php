@@ -21,10 +21,6 @@
 			margin-top: -100px;
 		}
 
-		a, a:visited {
-			text-decoration:none;
-		}
-
 		h1 {
 			font-size: 32px;
 			margin: 16px 0 0 0;
