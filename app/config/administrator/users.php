@@ -1,43 +1,25 @@
 <?php
-
 return array(
 	'action_permissions'=> array(
-	    // 'delete' => function($model)
-	    // {
-	    //     return Auth::user()->can('delete_users');
-	    // },
-	    // 'create' => function($model)
-	    // {
-	    //     return Auth::user()->can('create_users');
-	    // },
-	    // 'update' => function($model)
-	    // {
-	    //     return Auth::user()->can('edit_users');
-	    // }
+	    'delete' => function($model){
+	        return Auth::user()->can('delete_user');
+	    },
+	    'create' => function($model){
+	        return Auth::user()->can('create_user');
+	    },
+	    'update' => function($model){
+	        return Auth::user()->can('edit_user');
+	    },
+	    'view' => function($model){
+	    	return Auth::user()->can('view_user');
+	    }
 	),
-	/**
-	 * Model title
-	 *
-	 * @type string
-	 */
+	'permission'=> function(){
+		return Auth::user()->can('read');
+	},
 	'title' => 'Users',
-	/**
-	 * The singular name of your model
-	 *
-	 * @type string
-	 */
 	'single' => 'user',
-	/**
-	 * The class name of the Eloquent model that this config represents
-	 *
-	 * @type string
-	 */
 	'model' => 'User',
-	/**
-	 * The columns array
-	 *
-	 * @type array
-	 */
 	'columns' => array(
 	    'username' => array(
 	        'title' => 'Username'
@@ -71,13 +53,13 @@ return array(
 	    'confirmed' => array(
 	        'title' => 'Confirmed',
 	        'type' => 'bool'
+	    ),
+	    'role' => array(
+	    	'title' => 'Role',
+	    	'type' => 'relationship',
+	    	'name_field' => 'name'
 	    )
 	),
-	/**
-	 * The filter fields
-	 *
-	 * @type array
-	 */
 	'filters' => array(
 	    'id',
 	    'username' => array(

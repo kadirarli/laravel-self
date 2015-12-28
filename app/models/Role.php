@@ -8,7 +8,7 @@ class Role extends EntrustRole{
     	return $this->hasMany("AssignedRole","id");
     }
 
-    public function permissionRole(){
-    	return $this->hasMany("PermissionRole","id");
+    public function permission(){
+    	return $this->belongsToMany('Permission');
     }
 }

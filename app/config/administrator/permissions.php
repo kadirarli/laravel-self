@@ -1,43 +1,25 @@
 <?php
-
 return array(
-	// 'action_permissions'=> array(
-	//     'delete' => function($model)
-	//     {
-	//         return Auth::user()->can('delete_users');
-	//     },
-	//     'create' => function($model)
-	//     {
-	//         return Auth::user()->can('create_users');
-	//     },
-	//     'update' => function($model)
-	//     {
-	//         return Auth::user()->can('edit_users');
-	//     }
-	// ),
-	/**
-	 * Model title
-	 *
-	 * @type string
-	 */
+	'action_permissions'=> array(
+	    'delete' => function($model){
+	        return Auth::user()->can('delete_permission');
+	    },
+	    'create' => function($model){
+	        return Auth::user()->can('create_permission');
+	    },
+	    'update' => function($model){
+	        return Auth::user()->can('update_permission');
+	    },
+	    'view' => function($model){
+	    	return Auth::user()->can('view_permission');
+	    }
+	),
+	'permission'=> function(){
+		return Auth::user()->can('read');
+	},
 	'title' => 'Permissions',
-	/**
-	 * The singular name of your model
-	 *
-	 * @type string
-	 */
 	'single' => 'permission',
-	/**
-	 * The class name of the Eloquent model that this config represents
-	 *
-	 * @type string
-	 */
 	'model' => 'Permission',
-	/**
-	 * The columns array
-	 *
-	 * @type array
-	 */
 	'columns' => array(
 	    'name' => array(
 	        'title' => 'Name'
@@ -61,12 +43,7 @@ return array(
 	        'title' => 'Display Name',
 	        'type' => 'text'
 	    )
-	),
-	/**
-	 * The filter fields
-	 *
-	 * @type array
-	 */
+	), 
 	'filters' => array(
 	    'id',
 	    'name' => array(

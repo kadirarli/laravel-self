@@ -55,9 +55,7 @@ return array(
 			"User Configrations" => array(	
 											"permissions",
 											"roles",
-											//"permissionRoles",
 											"users",
-											//"assignedRoles"
 											),
 			'Settings' => array('settings.site')),
 

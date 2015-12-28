@@ -25,4 +25,8 @@ class User extends Eloquent implements ConfideUserInterface
 			WHERE
 			    u.id = ".$user_id);
     }
+
+    public function role(){
+    	return $this->belongsToMany('role','assigned_roles');
+    }
 }
