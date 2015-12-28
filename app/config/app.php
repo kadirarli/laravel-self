@@ -127,6 +127,7 @@ return array(
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
 		'Thujohn\Rss\RssServiceProvider',
 		'Mews\Purifier\PurifierServiceProvider',
+		'Artdarek\OAuth\OAuthServiceProvider'
 	),
 
 	/*
@@ -201,6 +202,7 @@ return array(
 		'Twitter'    	  => 'Vinicius73\SEO\Facades\TwitterHelper',
 		'Rss'			  => 'Thujohn\Rss\RssFacade',
 		'Purifier'		  => 'Mews\Purifier\Facades\Purifier',
+		'OAuth' 		  => 'Artdarek\OAuth\Facade\OAuth',
 	),
 
 );

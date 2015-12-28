@@ -1,5 +1,9 @@
 <?php
 
+$user = new User;
+
+$user = $user->adminCard(null !== Auth::user()?Auth::user()->id:1);
+
 return array(
 
 	/**
@@ -136,5 +140,5 @@ return array(
 	 */
 	'locales' => array("tr","en"),
 
-	'user' => User::adminCard(null !== Auth::user()?Auth::user()->id:1),
+	'user' => User::adminCard(null !== Auth::user()?Auth::user()->id:null),
 );
