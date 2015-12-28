@@ -41,14 +41,16 @@
     <script type="text/javascript">
     $('#fblogin').click(function(){
         $.ajax({
-            type: 'post',
+            type: 'POST',
+            crossDomain: true, // enable this
             url: "{{{ URL::to('/users/loginWithFacebook') }}}",                       
             success: function(data) {
                 console.log('success');
             },
             error:function (xhr, ajaxOptions, thrownError){
                 console.log('error');
-            }
+            },
+            dataType:"jsonp",
         });
     }); 
     </script>
