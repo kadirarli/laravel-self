@@ -1,30 +1,18 @@
 <?php namespace Kadirarli\SEO;
 
-//use \Vinicius73\SEO\Generators\SitemapGenerator;
-
 class SitemapRun
 {
-
-    /**
-     * @var \Vinicius73\SEO\Generators\SitemapGenerator
-     */
     public $generator;
 
-    public function __construct($generator)
-    {
+    public function __construct($generator){
         $this->generator = $generator;
     }
 
-    /**
-     * Run generator commands
-     */
-    public function run()
-    {
+    public function run(){
         return $this->index();
     }
 
-    public function index()
-    {
+    public function index(){
         $this->generator->addRaw(
             array(
                   'location'         => '/sitemap-posts.xml',
@@ -33,39 +21,10 @@ class SitemapRun
                   'priority'         => '0.95'
             )
         );
-
         return $this->response($this->generator->generate());
     }
 
-    public function posts()
-    {
-        /*
-        $posts = Post::all();
-
-        foreach($posts as $post)
-        {
-            $images = $post->images;
-
-            $element = array(
-                      'location'         => route('route.to.post.show', $post->id),
-                      'last_modified'    => $post->published_date->toW3CString(),
-                      'change_frequency' => 'weekly',
-                      'priority'         => '0.90'
-                );
-
-            if ($images):
-                $element['images'] = array();
-                foreach ($images as $image):
-                    $element['images'][] = $image->url();
-                endforeach;
-            endif;
-
-            $this->generator->addRaw($element);
-        }
-
-        return $this->response($this->generator->generate());
-        */
-        //
+    public function posts(){
         $this->generator->addRaw(
           array(
               'location'         => 'example.com',
@@ -91,17 +50,9 @@ class SitemapRun
           )
         );
         return $this->response($this->generator->generate());
-        //return $this->generator->generate();
-
     }
-
-    /**
-     * @param $sitemap
-     *
-     * @return \Illuminate\Http\Response
-     */
-    private function response($sitemap)
-    {
+    
+    private function response($sitemap){
         return Response::make($sitemap, 200, array('Content-Type' => 'text/xml'));
     }
 }

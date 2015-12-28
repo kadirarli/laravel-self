@@ -49,6 +49,9 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+	if (!App::environment('local')) {
+        return Response::view('errors.'.$code, array("exception"=>$exception,"code"=>$code));
+    }
 });
 
 /*
