@@ -34,25 +34,7 @@
         </fieldset>
     </form>
 
-    <input type='button' value='Facebook' id="fblogin">
+    <a href="{{{ URL::to('/users/loginWithFacebook') }}}">Login With Facebook</a>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-    <script type="text/javascript">
-    $('#fblogin').click(function(){
-        $.ajax({
-            type: 'POST',
-            crossDomain: true, // enable this
-            url: "{{{ URL::to('/users/loginWithFacebook') }}}",                       
-            success: function(data) {
-                console.log('success');
-            },
-            error:function (xhr, ajaxOptions, thrownError){
-                console.log('error');
-            },
-            dataType:"jsonp",
-        });
-    }); 
-    </script>
-
+    <!--script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script-->
 @stop

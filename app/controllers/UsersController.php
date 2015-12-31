@@ -211,7 +211,7 @@ class UsersController extends \BaseController
         $code = Input::get( 'code' );
 
         // get fb service
-        $fb = OAuth::consumer( 'Facebook', 'http://laravel-self.kadir' );
+        $fb = OAuth::consumer( 'Facebook' );
 
         // check if code is valid
 
