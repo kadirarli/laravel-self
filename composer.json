@@ -11,8 +11,7 @@
 		"vinicius73/seotools": "1.*",
 		"thujohn/rss": "~1.0",
 		"mews/purifier": "dev-master-l4",
-		"fzaninotto/faker": "v1.3.0",
-		"artdarek/oauth-4-laravel": "dev-master"
+		"fzaninotto/faker": "v1.3.0"
 	},
 	"autoload": {
 		"classmap": [

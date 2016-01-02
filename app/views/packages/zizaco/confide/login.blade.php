@@ -34,7 +34,5 @@
         </fieldset>
     </form>
 
-    <a href="{{{ URL::to('/users/loginWithFacebook') }}}">Login With Facebook</a>
-
     <!--script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script-->
 @stop

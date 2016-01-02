@@ -126,8 +126,7 @@ return array(
 		'Frozennode\Administrator\AdministratorServiceProvider',
 		'Vinicius73\SEO\Providers\SEOServiceProvider',
 		'Thujohn\Rss\RssServiceProvider',
-		'Mews\Purifier\PurifierServiceProvider',
-		'Artdarek\OAuth\OAuthServiceProvider'
+		'Mews\Purifier\PurifierServiceProvider'
 	),
 
 	/*
@@ -201,8 +200,7 @@ return array(
 		'OpenGraph' 	  => 'Vinicius73\SEO\Facades\OpenGraphHelper',
 		'Twitter'    	  => 'Vinicius73\SEO\Facades\TwitterHelper',
 		'Rss'			  => 'Thujohn\Rss\RssFacade',
-		'Purifier'		  => 'Mews\Purifier\Facades\Purifier',
-		'OAuth' 		  => 'Artdarek\OAuth\Facade\OAuth',
+		'Purifier'		  => 'Mews\Purifier\Facades\Purifier'
 	),
 
 );
