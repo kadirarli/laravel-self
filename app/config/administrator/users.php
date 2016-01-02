@@ -17,45 +17,41 @@ return array(
 	'permission'=> function(){
 		return Auth::user()->can('read');
 	},
-	'title' => 'Users',
-	'single' => 'user',
+	'title' => Lang::get('tags.users'),
+	'single' => Lang::get('tags.user'),
 	'model' => 'User',
 	'columns' => array(
 	    'username' => array(
-	        'title' => 'Username'
+	        'title' => Lang::get('tags.username')
 	    ),
 	    'email' => array(
-	        'title' => 'Email'
+	        'title' => Lang::get('tags.email')
 	    ),
 	    'confirmed' => array(
-	        'title' => 'Confirmed'
+	        'title' => Lang::get('tags.confirmed')
 	    ),
 	    'created_at' => array(
-	        'title' => 'Created At'
+	        'title' => Lang::get('tags.created_at')
 	    ),
 	    'updated_at' => array(
-	        'title' => 'Updated At'
+	        'title' => Lang::get('tags.updated_at')
 	    ),
 	),
 	'edit_fields' => array(
 	    'username' => array(
-	        'title' => 'Username',
+	        'title' => Lang::get('tags.username'),
 	        'type' => 'text'
 	    ),
 	    'email' => array(
-	        'title' => 'Email',
+	        'title' => Lang::get('tags.email'),
 	        'type' => 'text'
 	    ),
-	    'password' => array(
-	        'title' => 'Password',
-	        'type' => 'password'
-	    ),
 	    'confirmed' => array(
-	        'title' => 'Confirmed',
+	        'title' => Lang::get('tags.confirmed'),
 	        'type' => 'bool'
 	    ),
 	    'role' => array(
-	    	'title' => 'Role',
+	    	'title' => ucfirst(Lang::get('tags.role')),
 	    	'type' => 'relationship',
 	    	'name_field' => 'name'
 	    )
@@ -63,18 +59,18 @@ return array(
 	'filters' => array(
 	    'id',
 	    'username' => array(
-	        'title' => 'username',
+	        'title' => Lang::get('tags.username'),
 	    ),
 	    'email' => array(
-	        'title' => 'Email',
+	        'title' => Lang::get('tags.email'),
 	        'type' => 'text'
 	    ),
 	    'created_at' => array(
-	        'title' => 'Date',
+	        'title' => Lang::get('tags.created_at'),
 	        'type' => 'date'
 	    ),
 	    'updated_at' => array(
-	        'title' => 'Date',
+	        'title' => Lang::get('tags.updated_at'),
 	        'type' => 'date'
 	    )
 	),
